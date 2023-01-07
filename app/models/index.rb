@@ -1,0 +1,3 @@
+class Index < ApplicationRecord
+    
+end

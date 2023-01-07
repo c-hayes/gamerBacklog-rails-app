@@ -1,0 +1,16 @@
+<header>
+    <div class="container__top">
+        <div class="logo__container flex">
+            <img src="./assets/small-logo.png" alt="Backlog Icon">
+            <h1>Video Games Directory</h1>
+        </div>
+        <nav>
+            <ul>
+                <li> <%= link_to "Home", root_path%></li>
+                <li> <%= link_to "Find Your Game", search_path%></li>
+                <li> <%= link_to "Sign In / Up", "#", class:"btn no-cursor"%></li>
+            </ul>
+        </nav>  
+    </div>
+    <%= render "partials/search_header"%>
+</header>

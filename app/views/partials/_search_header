@@ -1,0 +1,6 @@
+<div class="search__container">
+    <input type="text" placeholder="Search by game, genre, or character">
+    <button class="btn__search">
+        <img src="./assets/tiny-search.png" >
+    </button>
+</div>      
