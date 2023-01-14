@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   root "index#index"
 
   get 'search', to: 'index#search'
-
+  get 'get_search_results', to: 'search#get_search_results', as: :get_search_results
 end
