@@ -1,0 +1,12 @@
+<div class="search__container">
+   
+    <%= form_with url: get_search_results_path, method: :put do |form| %> 
+    <%= form.label :query, "Search for:" %>
+    <%= form.text_field :q %>
+    <%= form.submit "Search" %>
+    <% end %>
+    <button class="btn__search">
+            <img src="./assets/tiny-search.png" >
+        </button>
+    
+</div>      

@@ -1,0 +1,57 @@
+<%= form_with(model: game) do |form| %>
+  <% if game.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(game.errors.count, "error") %> prohibited this game from being saved:</h2>
+
+      <ul>
+        <% game.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :artworks, style: "display: block" %>
+    <%= form.number_field :artworks %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :platforms, style: "display: block" %>
+    <%= form.number_field :platforms %>
+  </div>
+
+  <div>
+    <%= form.label :release_dates, style: "display: block" %>
+    <%= form.number_field :release_dates %>
+  </div>
+
+  <div>
+    <%= form.label :screenshots, style: "display: block" %>
+    <%= form.number_field :screenshots %>
+  </div>
+
+  <div>
+    <%= form.label :summary, style: "display: block" %>
+    <%= form.text_area :summary %>
+  </div>
+
+  <div>
+    <%= form.label :genre, style: "display: block" %>
+    <%= form.number_field :genre %>
+  </div>
+
+  <div>
+    <%= form.label :total_rating, style: "display: block" %>
+    <%= form.text_field :total_rating %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

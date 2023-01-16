@@ -30,6 +30,8 @@ gem "jbuilder"
 # for access to IGDB's api
 gem 'ruby-apicalypse'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'json'
+gem 'rest-client'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

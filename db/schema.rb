@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_02_140834) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_16_202436) do
+  create_table "games", force: :cascade do |t|
+    t.integer "artworks"
+    t.string "name"
+    t.integer "platforms"
+    t.integer "release_dates"
+    t.integer "screenshots"
+    t.text "summary"
+    t.integer "genre"
+    t.float "total_rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "indices", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
