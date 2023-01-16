@@ -1,7 +1,7 @@
 <div class="search__container">
    
     <%= form_with url: get_search_results_path, method: :put do |form| %> 
-    <%= form.label :query, "Search for:" %>
+    <%= form.label :q, "Search for:" %>
     <%= form.text_field :q %>
     <%= form.submit "Search" %>
     <% end %>
