@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :games
 
   get 'search', to: 'index#search'
-  put 'search/get_search_results', to: 'search#get_search_results', as: 'get_search_results'
+  post 'search/get_search', to: 'search#get_search', as: 'get_search'
   
   root "index#index"
 end

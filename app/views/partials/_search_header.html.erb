@@ -1,8 +1,13 @@
 <div class="search__container">
-   
-    <%= form_with url: get_search_results_path, method: :put do |form| %> 
-    <%= form.label :q, "Search for:" %>
-    <%= form.text_field :q %>
+    <div class="alert__container">
+      <% if flash[:alert] %>
+        <div class="alert__message"><%= flash[:alert] %></div>
+      <% end %>
+      <div class="mx-auto mt-5" style="width: 400px"></div>
+
+    <%= form_with url: get_search_path, method: :post do |form| %> 
+    <%= form.label :gamequery, "Search for:" %>
+    <%= form.text_field :gamequery, placeholder: 'Mario' %>
     <%= form.submit "Search" %>
     <% end %>
     <button class="btn__search">
